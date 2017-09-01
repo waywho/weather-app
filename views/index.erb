@@ -4,8 +4,28 @@
 	</head>
 
 	<body>
+	<main>
 		<h2>The weather right now in San Francisco</h2>
 
 		<h1><%= @temp %>&deg;F</h1>
+		<div>
+			<% @icons.each do |icon| %>
+				<img src="<%= icon %>" alt="weather icon" />
+			<% end %>
+		</div>
+	</main>
+	<footer>
+	</footer>
+		<ul>
+			<% @cities.each do |city| %>
+				<li><a href="/?city=<%= URI.escape(city) %>"><%= city %></a></li>
+			<% end %>
+		</ul>
+		<p>
+			Built with <heart>❤️</heart>
+			by <a href="https://github.com/waywho">WeiHsi Hu</a>
+			from <a href="http://thefirehoseproject.com">Firehose</a>
+			Icons by <a href="flaticon.com">flaticon</a>
+		</p>
 	</body>
 </html>
