@@ -5,3 +5,5 @@ gem 'sinatra'
 gem 'config_env'
 
 gem 'httparty'
+
+gem 'redis'

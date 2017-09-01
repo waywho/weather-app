@@ -5,9 +5,9 @@
 
 	<body>
 	<main>
-		<h2>The weather right now in San Francisco</h2>
+		<h2>The weather right now in <%= @city %></h2>
 
-		<h1><%= @temp %>&deg;F</h1>
+		<h1><%= @temp.round(1) %>&deg;F</h1>
 		<div>
 			<% @icons.each do |icon| %>
 				<img src="<%= icon %>" alt="weather icon" />
